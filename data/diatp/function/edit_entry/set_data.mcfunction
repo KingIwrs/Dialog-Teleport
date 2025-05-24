@@ -1,0 +1,1 @@
+$data modify storage diatp:temp edit_entry.actions insert 0 value {label: {text: "$(old_title)", color: "yellow"}, width: 150, on_click: {action: "run_command", command: "function diatp:edit_entry/editor with storage diatp:temp edit_entry"}}

@@ -1,0 +1,1 @@
+$data modify storage diatp:temp remove_entry.actions insert 0 value {label: {text: "$(title)", color: "red"}, width: 150, on_click: {action: "run_command", command: "function diatp:remove_entry/remove_entry {uuid: $(uuid), title: \"$(title)\"}"}}
