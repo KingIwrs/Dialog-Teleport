@@ -5,5 +5,15 @@ $dialog show @s {\
         "fallback": "Remove Entries"\
     },\
     "columns": 2,\
-    "actions": $(actions)\
+    "actions": $(actions),\
+    "exit_action": {\
+        "label": {\
+            "translate": "dialogs.remove_entry_menu.back",\
+            "fallback": "Back"\
+        },\
+        "action": {\
+            "type": "minecraft:show_dialog",\
+            "dialog": "diatp:dialog_teleport"\
+        }\
+    }\
 }

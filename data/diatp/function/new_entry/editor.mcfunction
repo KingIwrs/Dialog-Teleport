@@ -1,5 +1,5 @@
 $dialog show @s {\
-    "type": "minecraft:notice",\
+    "type": "minecraft:multi_action",\
     "title": {\
         "translate": "dialogs.new_entry.title",\
         "fallback": "New Entry"\
@@ -37,14 +37,26 @@ $dialog show @s {\
             "width": 50\
         }\
     ],\
-    "action": {\
+    "actions": [\
+        {\
+            "label": {\
+                "translate": "dialogs.new_entry.create",\
+                "fallback": "Create"\
+            },\
+            "action": {\
+                "type": "minecraft:dynamic/run_command",\
+                "template": "function diatp:new_entry/make_entry {uuid: $(uuid), title: \"$(title)\", x_pos: $(x_pos), y_pos: $(y_pos), z_pos: $(z_pos)}"\
+            }\
+        }\
+    ],\
+    "exit_action": {\
         "label": {\
-            "translate": "dialogs.new_entry.create",\
-            "fallback": "Create"\
+            "translate": "dialogs.new_entry.back",\
+            "fallback": "Back"\
         },\
         "action": {\
-            "type": "minecraft:dynamic/run_command",\
-            "template": "function diatp:new_entry/make_entry {uuid: $(uuid), title: \"$(title)\", x_pos: $(x_pos), y_pos: $(y_pos), z_pos: $(z_pos)}"\
+            "type": "minecraft:run_command",\
+            "command": "function diatp:teleport_menu/start"\
         }\
     }\
 }

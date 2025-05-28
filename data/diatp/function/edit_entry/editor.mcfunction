@@ -1,5 +1,5 @@
 $dialog show @s {\
-    "type": "minecraft:notice",\
+    "type": "minecraft:multi_action",\
     "title": {\
         "translate": "dialogs.edit_entry.title",\
         "fallback": "Edit Entry"\
@@ -38,14 +38,26 @@ $dialog show @s {\
             "width": 50\
         }\
     ],\
-    "action": {\
+    "actions": [\
+        {\
+            "label": {\
+                "translate": "dialogs.edit_entry.create",\
+                "fallback": "Create"\
+            },\
+            "action": {\
+                "type": "minecraft:dynamic/run_command",\
+                "template": "function diatp:edit_entry/edit_entry {uuid: $(uuid), old_title: \"$(old_title)\", new_title: \"$(new_title)\", new_x_pos: \"$(new_x_pos)\", new_y_pos: \"$(new_y_pos)\", new_z_pos: \"$(new_z_pos)\"}"\
+            }\
+        }\
+    ],\
+    "exit_action": {\
         "label": {\
-            "translate": "dialogs.edit_entry.save",\
-            "fallback": "Save"\
+            "translate": "dialogs.edit_entry.back",\
+            "fallback": "Back"\
         },\
         "action": {\
-            "type": "minecraft:dynamic/run_command",\
-            "template": "function diatp:edit_entry/edit_entry {uuid: $(uuid), old_title: \"$(old_title)\", new_title: \"$(new_title)\", new_x_pos: \"$(new_x_pos)\", new_y_pos: \"$(new_y_pos)\", new_z_pos: \"$(new_z_pos)\"}"\
+            "type": "minecraft:run_command",\
+            "command": "function diatp:edit_entry/start"\
         }\
     }\
 }
