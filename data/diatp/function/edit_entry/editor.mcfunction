@@ -1,15 +1,13 @@
 $dialog show @s {\
-    "type": "minecraft:simple_input_form",\
+    "type": "minecraft:notice",\
     "title": {\
         "translate": "dialogs.edit_entry.title",\
         "fallback": "Edit Entry"\
     },\
-    "body": [\
-        {\
-            "type": "minecraft:plain_message",\
-            "contents": "Edit this entry"\
-        }\
-    ],\
+    "body": {\
+        "type": "minecraft:plain_message",\
+        "contents": "Edit this entry"\
+    },\
     "inputs": [\
         {\
             "type": "minecraft:text",\
@@ -41,13 +39,12 @@ $dialog show @s {\
         }\
     ],\
     "action": {\
-        "id": "edit_entry_submit",\
         "label": {\
             "translate": "dialogs.edit_entry.save",\
             "fallback": "Save"\
         },\
-        "on_submit": {\
-            "type": "minecraft:command_template",\
+        "action": {\
+            "type": "minecraft:dynamic/run_command",\
             "template": "function diatp:edit_entry/edit_entry {uuid: $(uuid), old_title: \"$(old_title)\", new_title: \"$(new_title)\", new_x_pos: \"$(new_x_pos)\", new_y_pos: \"$(new_y_pos)\", new_z_pos: \"$(new_z_pos)\"}"\
         }\
     }\

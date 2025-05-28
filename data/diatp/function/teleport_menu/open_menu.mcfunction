@@ -4,6 +4,6 @@ data modify storage diatp:temp tp_menu.actions set value []
 
 function diatp:teleport_menu/set_data_start
 
-data modify storage diatp:temp tp_menu.actions insert -1 value {"label": {"text":"+","color":"yellow"},"width": 150,"on_click": {"action": "run_command","command": "function diatp:new_entry/start"}}
+data modify storage diatp:temp tp_menu.actions insert -1 value {"label": {"text":"+","color":"yellow"},"width": 150,"action": {"type": "run_command","command": "function diatp:new_entry/start"}}
 
 function diatp:teleport_menu/teleport_menu with storage diatp:temp tp_menu
