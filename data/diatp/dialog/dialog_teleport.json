@@ -42,5 +42,11 @@
                 "command": "function diatp:teleport_menu/start"
             }
         }
-    ]
+    ],
+    "exit_action": {
+        "label": {
+            "translate": "dialogs.dialog_teleport.back",
+            "fallback": "Back"
+        }
+    }
 }
