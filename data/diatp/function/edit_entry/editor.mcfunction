@@ -41,8 +41,8 @@ $dialog show @s {\
     "actions": [\
         {\
             "label": {\
-                "translate": "dialogs.edit_entry.create",\
-                "fallback": "Create"\
+                "translate": "dialogs.edit_entry.save",\
+                "fallback": "Save"\
             },\
             "action": {\
                 "type": "minecraft:dynamic/run_command",\
