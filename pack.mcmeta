@@ -1,6 +1,10 @@
 {
     "pack": {
+<<<<<<< HEAD
         "pack_format": 81,
+=======
+        "pack_format": 80,
+>>>>>>> ae476b911dd429d460eb6f437cd95c64030192a6
         "description": "A teleport system using the newly added dialogs."
     }
 }
