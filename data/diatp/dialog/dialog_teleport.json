@@ -17,7 +17,7 @@
             "width": 100,
             "action": {
                 "type": "run_command",
-                "command": "function diatp:edit_entry/start"
+                "command": "trigger diatp.edit_entries"
             }
         },
         {
@@ -28,7 +28,7 @@
             "width": 100,
             "action": {
                 "type": "run_command",
-                "command": "function diatp:remove_entry/start"
+                "command": "trigger diatp.remove_entry"
             }
         },
         {
@@ -39,7 +39,7 @@
             "width": 200,
             "action": {
                 "type": "run_command",
-                "command": "function diatp:teleport_menu/start"
+                "command": "trigger diatp.teleport_menu"
             }
         }
     ],

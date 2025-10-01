@@ -56,7 +56,7 @@ $dialog show @s {\
         },\
         "action": {\
             "type": "minecraft:run_command",\
-            "command": "function diatp:teleport_menu/start"\
+            "command": "trigger diatp.teleport_menu"\
         }\
     }\
 }

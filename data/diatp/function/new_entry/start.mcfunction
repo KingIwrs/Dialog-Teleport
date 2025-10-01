@@ -1,3 +1,6 @@
+scoreboard players reset @s diatp.new_entry
+scoreboard players enable @a diatp.new_entry
+
 data modify storage diatp:temp new_entry.uuid set from entity @s UUID
 data modify storage diatp:temp new_entry.current_x set from entity @s Pos[0]
 data modify storage diatp:temp new_entry.current_y set from entity @s Pos[1]
