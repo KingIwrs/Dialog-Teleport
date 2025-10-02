@@ -1,6 +1,9 @@
 {
     "pack": {
-        "pack_format": 88.0,
+        "pack_format": 88,
+        "supported_formats": [80, 88],
+        "min_format": 80,
+        "max_format": [88, 0],
         "description": "A teleport system using the newly added dialogs."
     }
 }
